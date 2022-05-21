@@ -21,6 +21,11 @@
     padding: 50px 0;
 }
 
+.banner-div img:hover {
+    transform: scale(1.2);
+    transition: transform 3s ease-out;
+}
+
 .banner-div h1 {
     font-size: 50px;
     line-height: 60px;
@@ -29,7 +34,7 @@
 
 .banner-button {
     display: inline-block;
-    background: #ff523b;
+    background: #ff3100;
     color: white;
     padding: 8px 30px;
     margin: 30px 0;

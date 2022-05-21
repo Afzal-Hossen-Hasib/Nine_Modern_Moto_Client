@@ -33,22 +33,22 @@ const Featured = () => {
             <div className="featured-products">
                 <img src={item1} alt="" />
                 <h4>Sport Breake</h4>
-                <p>Price: $200.00</p>
+                <p className='text-center'>Price: $200.00</p>
             </div>
             <div className="featured-products">
                 <img src={item2} alt="" />
                 <h4>Sport Seat</h4>
-                <p>Price: $200.00</p>
+                <p className='text-center'>Price: $200.00</p>
             </div>
             <div className="featured-products">
                 <img src={item3} alt="" />
                 <h4>Sport Shoes</h4>
-                <p>Price: $200.00</p>
+                <p className='text-center'>Price: $200.00</p>
             </div>
             <div className="featured-products">
                 <img src={item4} alt="" />
                 <h4>Pressure Meter</h4>
-                <p>Price: $200.00</p>
+                <p className='text-center'>Price: $200.00</p>
             </div>
         </div>
         </div>
