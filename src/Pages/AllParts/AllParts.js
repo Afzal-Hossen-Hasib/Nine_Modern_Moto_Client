@@ -1,19 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import useParts from "../../../hooks/useParts";
-import "./Parts.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useParts from '../../hooks/useParts';
 
-const Parts = () => {
-  const [parts, setParts] = useParts();
-  const newParts = parts.slice(0, 6);
+const AllParts = () => {
 
-  return (
-    <div className="container pb-4">
-      <h1 className="part-title">Parts: {newParts.length}</h1>
+    const [parts, setParts] = useParts();
+
+    return (
+        <div className="container pb-4">
+      <h1 className="part-title">Parts</h1>
 
       <div className="parts-div">
-        {newParts.map((showPart) => {
-          const { name, img, price, availablequantity, minimunorder, desription } = showPart;
+        {parts.map((Part) => {
+          const { name, img, price, availablequantity, minimunorder, desription } = Part;
           return (
             <div>
               <div class="card-group single-part">
@@ -27,18 +26,16 @@ const Parts = () => {
                     <p class="card-text">{desription}</p>
                   </div>
                   <div class="card-footer item-part">
-                    <Link to=''>Purchase</Link>
+                  <Link to=''>Purchase</Link>
                   </div>
                 </div>
               </div>
-              
             </div>
           );
         })}
       </div>
-      <Link to='/parts'>See All</Link>
     </div>
-  );
+    );
 };
 
-export default Parts;
+export default AllParts;

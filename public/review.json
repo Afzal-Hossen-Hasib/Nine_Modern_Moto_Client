@@ -1,86 +1,44 @@
 [
     {
       "id": "628a15d99d8657541bac1b5b",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/Jv7LxBB/images-1.jpg",
       "name": "Puckett Jimenez",
-      "rating": "Wade Brewer",
-      "desription": "822 Hinsdale Street, Woodburn, New Jersey, 1161"
+      "rating": "5 Out Of 5",
+      "desription": "Very good service I have to say. They sold me the genuine part."
     },
     {
       "id": "628a15d96ddae965f9588a90",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/rbKxhCb/images-5.jpg",
       "name": "Claudia Hopkins",
-      "rating": "Avis House",
-      "desription": "943 Matthews Place, Gibbsville, Missouri, 5935"
+      "rating": "4.5 Out Of 5",
+      "desription": "Great customer service, helped me resolve a warranty issue."
     },
     {
       "id": "628a15d90687a255dcb0d9a3",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/GpkR8Tt/images-4.jpg",
       "name": "Edwards Marshall",
-      "rating": "Monroe Nichols",
-      "desription": "875 Logan Street, Salix, New Mexico, 3228"
+      "rating": "5 Out Of 5",
+      "desription": "Very smooth and problem free experiencing with my order."
     },
     {
       "id": "628a15d9a5d8f7bd27c63b50",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/KwZnmJv/images-3.jpg",
       "name": "Strong Mccormick",
-      "rating": "Burton Hardy",
-      "desription": "230 Ridgecrest Terrace, Savannah, District Of Columbia, 3975"
+      "rating": "4.5 Out Of 5",
+      "desription": "Excellent, quick service and good comms. Would recommend"
     },
     {
       "id": "628a15d95f0fe903f2f44396",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/qjBQ8Xx/images-2.jpg",
       "name": "Higgins Randolph",
-      "rating": "Shawna Gilbert",
-      "desription": "847 Bliss Terrace, Topanga, Florida, 3534"
+      "rating": "4 Out Of 5",
+      "desription": "All great, fast , efficient and good quality."
     },
     {
       "id": "628a15d96c13a00dbfac5d9c",
-      "img": "http://placehold.it/32x32",
+      "img": "https://i.ibb.co/b1sw4xP/images.jpg",
       "name": "Buchanan William",
-      "rating": "Keisha Townsend",
-      "desription": "282 Box Street, Katonah, Illinois, 7326"
-    },
-    {
-      "id": "628a15d92ac938af8b04e119",
-      "img": "http://placehold.it/32x32",
-      "name": "Carrie Stephens",
-      "rating": "Geneva Gomez",
-      "desription": "136 Clinton Avenue, Loveland, Northern Mariana Islands, 5441"
-    },
-    {
-      "id": "628a15d9ee9dd0ffbf994069",
-      "img": "http://placehold.it/32x32",
-      "name": "Ola Mullins",
-      "rating": "Angelica Adams",
-      "desription": "270 Langham Street, Dexter, Colorado, 947"
-    },
-    {
-      "id": "628a15d982756685a141aa62",
-      "img": "http://placehold.it/32x32",
-      "name": "Miranda Roach",
-      "rating": "Bridget Petersen",
-      "desription": "821 Madison Place, Starks, Pennsylvania, 831"
-    },
-    {
-      "id": "628a15d99bde85e419198546",
-      "img": "http://placehold.it/32x32",
-      "name": "Chase Preston",
-      "rating": "Simone Mann",
-      "desription": "586 Wyckoff Street, Alamo, Virginia, 689"
-    },
-    {
-      "id": "628a15d9be17d117f4537d9e",
-      "img": "http://placehold.it/32x32",
-      "name": "Thornton Raymond",
-      "rating": "Riggs Moran",
-      "desription": "164 Cook Street, Hollins, Maryland, 4847"
-    },
-    {
-      "id": "628a15d91bd9c8d0ddcea50e",
-      "img": "http://placehold.it/32x32",
-      "name": "James David",
-      "rating": "Powell Baldwin",
-      "desription": "287 Murdock Court, Unionville, Texas, 6572"
+      "rating": "5 Out Of 5",
+      "desription": "Fast delivery, good price I would definitely recommend from my experience"
     }
   ]

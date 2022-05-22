@@ -1,19 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import useReview from "../../../hooks/useReview";
-import "./Review.css";
+import React from 'react';
+import useReview from '../../hooks/useReview';
 
-const Review = () => {
-  const [review, setReview] = useReview();
+const AllReview = () => {
 
-  const clientReview = review.slice(0, 3);
+    const [reviews, setReviews] = useReview();
 
-  return (
-    <div className="container review-div">
+    return (
+        <div className="container review-div">
       <h1 className="review-title">Our Client Says</h1>
       <div className="review-card">
-        {clientReview.map((client) => {
-          const { name, img, rating, desription } = client;
+        {reviews.map((review) => {
+          const { name, img, rating, desription } = review;
           return (
             <div className="single-reviews">
               <div class="row">
@@ -32,11 +29,8 @@ const Review = () => {
           );
         })}
       </div>
-      <Link to="/allreview" className="review-button w-25 d-block mx-auto">
-        SEE MORE..
-      </Link>
     </div>
-  );
+    );
 };
 
-export default Review;
+export default AllReview;
