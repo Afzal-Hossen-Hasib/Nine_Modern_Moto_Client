@@ -7,7 +7,7 @@ import "./Summary.css";
 
 const Summary = () => {
   return (
-    <div>
+    <div className="container">
       <div className="summary-title">
       <h1>Millions Business Trust Us</h1>
       <h4>Try To Understand Users Expectation</h4>

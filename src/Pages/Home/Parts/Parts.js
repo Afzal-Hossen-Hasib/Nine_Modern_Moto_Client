@@ -1,51 +1,41 @@
-import React from 'react';
-import './Parts.css'
+import React from "react";
+import useParts from "../../../hooks/useParts";
+import "./Parts.css";
 
 const Parts = () => {
-    return (
-        <div className='container pb-4'>
-            <h1 className='part-title'>Parts</h1>
+  const [parts, setParts] = useParts();
+  const newParts = parts.slice(0, 6);
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      {/* <img src="..." class="card-img-top" alt="..."> */}
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      {/* <img src="..." class="card-img-top" alt="..."> */}
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      {/* <img src="..." class="card-img-top" alt="..."> */}
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+  return (
+    <div className="container pb-4">
+      <h1 className="part-title">Parts: {newParts.length}</h1>
+
+      <div className="parts-div">
+        {newParts.map((showPart) => {
+          const { name, img, price, availablequantity, minimunorder, desription } = showPart;
+          return (
+            <div>
+              <div class="card-group single-part">
+                <div class="card item-part">
+                  <img src={img} alt="" />
+                  <div class="card-body">
+                    <h5 class="card-title">{name}</h5>
+                    <p class="card-text">Price: ${price}</p>
+                    <p class="card-text">Available Quantity: {availablequantity}</p>
+                    <p class="card-text">Minimum Order: {minimunorder}</p>
+                    <p class="card-text">{desription}</p>
+                  </div>
+                  <div class="card-footer item-part">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
-  </div>
-</div>
-        </div>
-    );
+  );
 };
 
 export default Parts;

@@ -1,3 +1,23 @@
+.parts-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+
+.item-part {
+    border: none;
+    box-shadow: rgba(153, 152, 152, 0.3) 0px 19px 38px, rgba(245, 152, 140, 0.22) 0px 15px 12px;
+}
+
+.single-part {
+    margin-bottom: 50px;
+}
+
+.single-part img {
+    width: 250px;
+    height: 250px;
+}
+
 .part-title {
     text-align: center;
     position: relative;
