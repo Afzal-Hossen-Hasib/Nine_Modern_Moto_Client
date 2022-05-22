@@ -32,7 +32,7 @@ const Parts = () => {
                     <p class="card-text">{desription}</p>
                   </div>
                   <div class="card-footer item-part">
-                    <button onClick={() => handlePurchase (_id)}>Purchase</button>
+                    <button onClick={() => handlePurchase (_id)} className="w-50 d-block mx-auto purchase-button">Purchase</button>
                   </div>
                 </div>
               </div>
@@ -41,7 +41,7 @@ const Parts = () => {
           );
         })}
       </div>
-      <Link to='/allparts'>See All</Link>
+      <Link className="review-button w-25 d-block mx-auto text-center" to='/allparts'>See All</Link>
     </div>
   );
 };

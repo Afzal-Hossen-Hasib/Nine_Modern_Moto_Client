@@ -18,6 +18,15 @@
     height: 200px;
 }
 
+.purchase-button {
+    border: none;
+    background-color: #ff3100;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
 .part-title {
     text-align: center;
     position: relative;

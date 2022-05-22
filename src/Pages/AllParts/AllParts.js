@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useParts from '../../hooks/useParts';
 
 const AllParts = () => {
 
     const [parts, setParts] = useParts();
+    const navigate = useNavigate();
+
+  const handlePurchase = id => {
+        navigate(`/part/${id}`)
+  }
 
     return (
         <div className="container pb-4">
@@ -12,7 +17,7 @@ const AllParts = () => {
 
       <div className="parts-div">
         {parts.map((Part) => {
-          const { name, img, price, availablequantity, minimunorder, desription } = Part;
+          const { name, img, price, availablequantity, minimunorder, desription, _id } = Part;
           return (
             <div>
               <div class="card-group single-part">
@@ -26,7 +31,7 @@ const AllParts = () => {
                     <p class="card-text">{desription}</p>
                   </div>
                   <div class="card-footer item-part">
-                  <Link to=''>Purchase</Link>
+                  <button onClick={() => handlePurchase (_id)} className="w-50 d-block mx-auto purchase-button">Purchase</button>
                   </div>
                 </div>
               </div>

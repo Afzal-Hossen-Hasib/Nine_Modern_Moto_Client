@@ -22,7 +22,13 @@ const Review = () => {
                     <img src={img} alt="" />
                     <div class="card-body">
                       <h4 class="card-title">{name}</h4>
-                      <h6 class="card-title">{rating}</h6>
+                      <div className="rating">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      </div>
                       <p class="card-text">{desription}</p>
                     </div>
                   </div>
@@ -33,7 +39,7 @@ const Review = () => {
         })}
       </div>
       <Link to="/allreview" className="review-button w-25 d-block mx-auto">
-        SEE MORE..
+        Please Say something
       </Link>
     </div>
   );
