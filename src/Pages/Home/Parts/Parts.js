@@ -1,19 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useParts from "../../../hooks/useParts";
 import "./Parts.css";
 
 const Parts = () => {
   const [parts, setParts] = useParts();
   const newParts = parts.slice(0, 6);
+  const navigate = useNavigate();
+
+  const handlePurchase = id => {
+        navigate(`/part/${id}`)
+  }
 
   return (
     <div className="container pb-4">
-      <h1 className="part-title">Parts: {newParts.length}</h1>
+      <h1 className="part-title">Parts</h1>
 
       <div className="parts-div">
         {newParts.map((showPart) => {
-          const { name, img, price, availablequantity, minimunorder, desription } = showPart;
+          const { name, img, price, availablequantity, minimunorder, desription, _id } = showPart;
           return (
             <div>
               <div class="card-group single-part">
@@ -27,7 +32,7 @@ const Parts = () => {
                     <p class="card-text">{desription}</p>
                   </div>
                   <div class="card-footer item-part">
-                    <Link to=''>Purchase</Link>
+                    <button onClick={() => handlePurchase (_id)}>Purchase</button>
                   </div>
                 </div>
               </div>
@@ -36,7 +41,7 @@ const Parts = () => {
           );
         })}
       </div>
-      <Link to='/parts'>See All</Link>
+      <Link to='/allparts'>See All</Link>
     </div>
   );
 };
