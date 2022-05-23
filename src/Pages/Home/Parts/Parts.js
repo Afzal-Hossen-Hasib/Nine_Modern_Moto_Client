@@ -24,12 +24,12 @@ const Parts = () => {
               <div class="card-group single-part">
                 <div class="card item-part">
                   <img src={img} alt="" />
-                  <div class="card-body">
-                    <h5 class="card-title">{name}</h5>
-                    <p class="card-text">Price: ${price}</p>
-                    <p class="card-text">Available Quantity: {availablequantity}</p>
-                    <p class="card-text">Minimum Order: {minimunorder}</p>
-                    <p class="card-text">{desription}</p>
+                  <div class="card-body title-part">
+                    <h4 class="card-title my-3">{name}</h4>
+                    <p class="card-text">Price: <span>${price}</span></p>
+                    <p class="card-text">Available Quantity:<span> {availablequantity}</span></p>
+                    <p class="card-text">Minimum Order:<span> {minimunorder}</span></p>
+                    <h6 class="card-text">{desription}</h6>
                   </div>
                   <div class="card-footer item-part">
                     <button onClick={() => handlePurchase (_id)} className="w-50 d-block mx-auto purchase-button">Purchase</button>

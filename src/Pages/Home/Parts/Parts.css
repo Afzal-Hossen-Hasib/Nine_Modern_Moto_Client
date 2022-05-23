@@ -7,6 +7,27 @@
 .item-part {
     border: none;
     box-shadow: rgba(153, 152, 152, 0.3) 0px 19px 38px, rgba(245, 152, 140, 0.22) 0px 15px 12px;
+    transition: 0.5s;
+}
+
+.title-part h4 {
+    color: #283346;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.title-part p {
+    color: #283346;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.title-part span {
+    color: #ff3100;
+}
+
+.item-sec {
+    color: #ff3100;
 }
 
 .single-part {
@@ -16,6 +37,7 @@
 .single-part img {
     width: 200px;
     height: 200px;
+    margin: 0 auto;
 }
 
 .purchase-button {
@@ -48,4 +70,8 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.item-part:hover {
+    transform: translateY(-5px);
 }

@@ -7,6 +7,8 @@ import AllReview from './Pages/AllReview/AllReview';
 import AllParts from './Pages/AllParts/AllParts';
 import Purchase from './Pages/Purchase/Purchase';
 import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -15,9 +17,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/allreview' element={<AllReview></AllReview>}></Route>
-        <Route path='/part/:partId' element={<Purchase></Purchase>}></Route>
-        <Route path='/allparts' element={<AllParts></AllParts>}></Route>
+        <Route path='/part/:partId' element={<RequireAuth>
+          <Purchase></Purchase>
+        </RequireAuth>}></Route>
+        <Route path='/allparts' element={
+          <RequireAuth>
+            <AllParts></AllParts>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

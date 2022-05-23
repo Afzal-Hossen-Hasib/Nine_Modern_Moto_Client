@@ -1,0 +1,44 @@
+.login-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #283346;
+}
+
+.left-cont img {
+    width: 100%;
+}
+
+.login-button {
+    border: none;
+    background-color: #ff3100;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.create-button {
+    text-decoration: none;
+    color: #ff3100;
+}
+
+.create-title {
+    color: #283346;
+    font-weight: bold;
+}
+
+.signup-button {
+    border: none;
+    margin-right: 20px;
+    background-color: #283346;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.signup-button:hover {
+    background: #031d48;
+    color: wheat;
+}
+
+
+

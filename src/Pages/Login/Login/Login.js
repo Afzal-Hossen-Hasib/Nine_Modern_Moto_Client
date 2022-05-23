@@ -5,6 +5,7 @@ import auth from '../../../firebase.init'
 import { useForm } from "react-hook-form";
 import "./Login.css";
 import Loading from "../../SharedPage/Loading/Loading";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -20,6 +21,9 @@ const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     let errorMessage;
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     if (gLoading || eLoading) {
         return <Loading></Loading>
@@ -29,8 +33,10 @@ const Login = () => {
         errorMessage = <p className="text-danger">{eError?.message || gError?.message}</p>
     }
 
-    if (gUser) {
-        console.log(gUser);
+    if (eUser || gUser) {
+        console.log(eUser || gUser);
+        navigate(from, { replace: true });
+
     }
 
     const onSubmit = data => {
@@ -39,23 +45,26 @@ const Login = () => {
     };
 
   return (
-    <div>
+    <div className="container">
+      <h1 className="featured-title mt-3">Please Login</h1>
       <div className="row">
         <div className="col-md-6">
           <div className="left-cont">
             <img src={login} alt="" />
           </div>
         </div>
+
+
         <div className="col-md-6">
 
-
+        <div className="right-cont">
         <form onSubmit={handleSubmit(onSubmit)}>
-
         <div>
             <label htmlFor="label">
-                <span>Email</span>
-            </label>
+                <span className="login-title">Email</span>
+            </label> <br />
             <input 
+            className="w-75 input-group-text"
             type="email" placeholder="Your Email" id="" 
             {...register("email", {
                 required: {
@@ -79,13 +88,12 @@ const Login = () => {
             </label>
         </div>
 
-
-
         <div>
             <label htmlFor="label">
-                <span>Password</span>
-            </label>
+                <span className="login-title">Password</span>
+            </label> <br />
             <input 
+            className="w-75 input-group-text"
             type="password" placeholder="Your Password" id="" 
             {...register("password", {
                 required: {
@@ -99,32 +107,35 @@ const Login = () => {
               })}
             />
             <label htmlFor="label">
-            {errors.password?.type === 'required' && <span className="text-danger">
-            {errors.password.message}
-            </span> }
+              {errors.password?.type === 'required' && <span className="text-danger">
+              {errors.password.message}
+              </span> }
             
-            {errors.password?.type === 'minLength' && <span className="text-danger">
-            {errors.password.message}
-            </span> }
+             {errors.password?.type === 'minLength' && <span className="text-danger">
+              {errors.password.message}
+              </span> }
             </label>
         </div>
               {errorMessage}
-      <input className="btn btn-primary" type="submit" value="Login" />
+      <input className="w-50 d-block mb-3 login-button" type="submit" value="Login" />
     </form>
 
+              
+              <p className="create-title">New To Modern Moto? <Link className="create-button" to='/register'>Creat New Account</Link></p>
 
-
-
-          <div>
-            <div className="d-flex align-items-center justify-content-center">
-              <div style={{ height: "2px" }} className="w-50 bg-danger"></div>
-              <p className="mt-3 mx-3 text-center">OR</p>
-              <div style={{ height: "2px" }} className="w-50 bg-danger"></div>
+            <div>
+              <div className="d-flex align-items-center justify-content-center">
+                <div style={{ height: "2px" }} className="w-50 bg-danger"></div>
+                <p className="mt-3 mx-3 text-center">OR</p>
+                <div style={{ height: "2px" }} className="w-50 bg-danger"></div>
+              </div>
+              <button className="w-50 d-block mx-auto signup-button" onClick={() => signInWithGoogle()}>
+                  Sign In With Google
+              </button>
             </div>
-            <button onClick={() => signInWithGoogle()}>
-                Sign In With Google
-            </button>
-          </div>
+        </div>
+
+            
         </div>
       </div>
     </div>

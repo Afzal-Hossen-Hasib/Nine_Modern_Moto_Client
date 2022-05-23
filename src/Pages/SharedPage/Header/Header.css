@@ -1,3 +1,16 @@
 .nav-menu {
     background: radial-gradient(#fff, #ffd6d6);
 }
+
+.header-title {
+    color: #031d48;
+    font-weight: bold;
+    font-size: 19px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.header-title:hover {
+    transform: translateY(-5px);
+    color: #283346;
+}

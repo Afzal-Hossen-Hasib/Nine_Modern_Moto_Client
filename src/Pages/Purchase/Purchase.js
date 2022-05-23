@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './Purchase.css'
 
 const Purchase = () => {
 
@@ -13,24 +14,23 @@ const Purchase = () => {
         .then (res => res.json())
         .then (data => setPart(data));
     } ,[])
-
+    
     return (
-        <div>
+        <div className='container'>
             <h2>Purchase</h2>
-            <div>
-              <div class="card-group">
-                <div class="card">
+            <div className='w-50 d-block mx-auto'>
+              <div class="card-group single-part">
+                <div class="card item-part">
                   <img src={part.img} alt="" />
-                  <div class="card-body">
-                    <h5 class="card-title">{part.name}</h5>
-                    <p class="card-text">Price: ${part.price}</p>
-                    <p class="card-text">Available Quantity: {part.availablequantity}</p>
-                    <p class="card-text">Minimum Order: {part.minimunorder}</p>
-                    <p class="card-text">{part.desription}</p>
+                  <div class="card-body title-part">
+                    <h4 class="card-title">{part.name}</h4>
+                    <p class="card-text">Price: <span>${part.price}</span></p>
+                    <p class="card-text">Available Quantity: <span>{part.availablequantity}</span></p>
+                    <p class="card-text">Minimum Order: <span>{part.minimunorder}</span></p>
+                    <h6 class="card-text">{part.desription}</h6>
                   </div>
                 </div>
-              </div>
-              
+              </div>            
             </div>
         </div>
     );
