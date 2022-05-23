@@ -1,0 +1,25 @@
+.order-title {
+    color: #283346;
+    font-weight: bold;
+}
+
+.order-title input {
+    border: 1px dotted lightsalmon;
+    outline: none;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-shadow: rgba(153, 152, 152, 0.3) 0px 19px 38px, rgba(245, 152, 140, 0.22) 0px 15px 12px;;
+}
+
+.order-button {
+    border: none;
+    background-color: #ff3100;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.order-button:hover {
+    background: orangered;
+}

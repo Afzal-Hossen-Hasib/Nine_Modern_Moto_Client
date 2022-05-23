@@ -10,6 +10,10 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import NotFound from './Pages/NotFound/NotFound';
+import MyProtfolio from './Pages/SharedPage/MyProtfolio/MyProtfolio';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -18,8 +22,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/allreview' element={<AllReview></AllReview>}></Route>
+        <Route path='/myprotfolio' element={<MyProtfolio></MyProtfolio>}></Route>
         <Route path='/part/:partId' element={<RequireAuth>
           <Purchase></Purchase>
+        </RequireAuth>}></Route>
+        <Route path='/dashboard' element={<RequireAuth>
+          <Dashboard></Dashboard>
         </RequireAuth>}></Route>
         <Route path='/allparts' element={
           <RequireAuth>
@@ -31,6 +39,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 import './Purchase.css'
 
 const Purchase = () => {
-
+    
+    const [user] = useAuthState(auth);
     const {partId} = useParams();
     const [part, setPart] = useState({});
+    const [inputQuantity, setInputQuantity] = useState ('');
 
     useEffect(() => {
         const url = `http://localhost:5000/part/${partId}`;
@@ -13,11 +18,50 @@ const Purchase = () => {
         fetch(url)
         .then (res => res.json())
         .then (data => setPart(data));
-    } ,[])
-    
+    } ,[partId])
+
+    const handleInputQuantity = event => {
+      setInputQuantity(event.target.value)
+    }
+
+    const Order = data => {
+      if(inputQuantity < part.minimunorder) {
+        return toast ('Order More Than 100');
+      }
+      else if (inputQuantity >= part.availablequantity) {
+        return toast ('Stock Out');
+      }
+
+      const order = {
+        price: part.price,
+        name: part.name,
+        quantity: inputQuantity,
+        userName: user.displayName, 
+        userEmail: user.email,
+    }
+
+    const url = `http://localhost:5000/myorder`
+    fetch (url, {
+      method: "POST",
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(order)
+    })
+
+    .then (res => res.json())
+    .then (result => {
+      console.log(result);
+   })
+    };
+
+  
     return (
         <div className='container'>
-            <h2>Purchase</h2>
+            <div>
+              <span>{user.displayName}</span>
+              <span>{user.email}</span>
+            </div>
             <div className='w-50 d-block mx-auto'>
               <div class="card-group single-part">
                 <div class="card item-part">
@@ -27,11 +71,16 @@ const Purchase = () => {
                     <p class="card-text">Price: <span>${part.price}</span></p>
                     <p class="card-text">Available Quantity: <span>{part.availablequantity}</span></p>
                     <p class="card-text">Minimum Order: <span>{part.minimunorder}</span></p>
+                    <h5 className='order-title'>
+                      Order: 
+                      <input onChange={handleInputQuantity} type="number" placeholder='Add Quantity' className='ms-2'/>
+                    </h5>
                     <h6 class="card-text">{part.desription}</h6>
                   </div>
                 </div>
               </div>            
             </div>
+            <button className='order-button w-25 d-block mx-auto' onClick={() => Order(Order) }>Place Order</button>
         </div>
     );
 };
