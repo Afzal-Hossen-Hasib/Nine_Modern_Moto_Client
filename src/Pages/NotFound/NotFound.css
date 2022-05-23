@@ -1,0 +1,34 @@
+.error-container {
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+}
+
+.error-container img{
+    margin-top: 30px;
+    width: 700px;
+    height: 500px;
+}
+
+.error-title h1 {
+    text-align: center;
+    color: #283346;
+    font-weight: bold;
+}
+
+.error-title span {
+    font-weight: bold;
+    color: #ff3100;
+}
+
+@media only screen and (max-width: 576px) {
+    .error-container img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .error-container img {
+        width: 100%;
+    }
+}

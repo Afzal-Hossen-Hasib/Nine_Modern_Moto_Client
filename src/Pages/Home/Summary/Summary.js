@@ -54,7 +54,7 @@ const Summary = () => {
       </div>
       <div className="summary-details">
             <div>
-                <h2>Have Any Question About Us Or Get A <br /> Products Request?</h2>
+                <h2>Have Any Question About Us Or Get A Products Request?</h2>
                 <p>Don't Hesitate To Contact Us.</p>
 
                 <button className="request-button">Request For Quote</button>

@@ -36,6 +36,19 @@
 
 .featured-products h4 {
     text-align: center;
+    color: #283346;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.featured-products p {
+    color: #283346;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.featured-products span {
+    color: #ff3100;
 }
 
 .featured-title {
