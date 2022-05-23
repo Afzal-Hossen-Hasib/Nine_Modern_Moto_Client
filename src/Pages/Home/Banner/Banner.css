@@ -16,6 +16,25 @@
     margin-top: 100px;
 }
 
+.banner-div h1 {
+    color: #031d48;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+.banner-div span {
+    color: #ff3100;
+}
+
+.banner-div p {
+    color: #283346;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
 .banner-div img {
     max-width: 100%;
     padding: 50px 0;

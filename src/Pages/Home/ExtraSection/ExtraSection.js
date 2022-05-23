@@ -9,7 +9,7 @@ const ExtraSection = () => {
                 <div className="banner-div">
                     <img className='extra-img' src={banner2} alt="" />
                 </div>
-                <div className="banner-div extra-div">
+                <div className="extra-div">
                     <p>REAL MEN ARE NOT AFRAID OF DIRT</p>
                     <h1> DIRT BIKE <br /> SAFETY <br /> GEAR</h1>
                     <button className='extra-button'>I NEED IT</button>
