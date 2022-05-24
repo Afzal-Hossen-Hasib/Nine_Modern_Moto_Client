@@ -10,6 +10,7 @@ const Purchase = () => {
     const [user] = useAuthState(auth);
     const {partId} = useParams();
     const [part, setPart] = useState({});
+    console.log(part);
     const [inputQuantity, setInputQuantity] = useState ('');
 
     useEffect(() => {
@@ -17,8 +18,8 @@ const Purchase = () => {
 
         fetch(url)
         .then (res => res.json())
-        .then (data => setPart(data));
-    } ,[partId])
+        .then (data => setPart(data))
+    } ,[partId]);
 
     const handleInputQuantity = event => {
       setInputQuantity(event.target.value)
@@ -37,7 +38,7 @@ const Purchase = () => {
         name: part.name,
         quantity: inputQuantity,
         userName: user.displayName, 
-        userEmail: user.email,
+        email: user.email,
     }
 
     const url = `http://localhost:5000/myorder`
@@ -76,11 +77,12 @@ const Purchase = () => {
                       <input onChange={handleInputQuantity} type="number" placeholder='Add Quantity' className='ms-2'/>
                     </h5>
                     <h6 class="card-text">{part.desription}</h6>
+                    <button className='order-button w-50 d-block mx-auto' onClick={() => Order(Order) }>Place Order</button>
                   </div>
                 </div>
               </div>            
             </div>
-            <button className='order-button w-25 d-block mx-auto' onClick={() => Order(Order) }>Place Order</button>
+            
         </div>
     );
 };

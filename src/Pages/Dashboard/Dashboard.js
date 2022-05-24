@@ -1,36 +1,22 @@
-import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import './Dashboard.css'
+import React, { useState } from "react";
+import { Nav } from "react-bootstrap";
+import { Link, Outlet } from "react-router-dom";
+import "./Dashboard.css";
 
 const Dashboard = () => {
+  const [Expanded, setExpanded] = useState(false);
 
-    const [Expanded, setExpanded] = useState(false);
-
-    return (
-        <div>
-            <div className={Expanded ? "side-nav-container" : "side-nav-container side-nav-container-NX"}>
-                <Outlet></Outlet>
-                <div className="nav-upper">
-                    <div className="nav-heading">
-                        {Expanded && (<div className="nav-brand">
-                            <img src="icons/logo.svg" alt="" />
-                            <h2>Dashboard</h2>
-                        </div>)}
-                        <button className={Expanded? 'hamburger hamburger-in' : 'hamburger hamburger-out'}
-                        onClick={() => setExpanded(!Expanded)}
-                        >
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/login'>Login</Link>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <Nav defaultActiveKey="/home" className="flex-column">
+      <Outlet></Outlet>
+        <Nav.Link as={Link} to="/dashboard/myorder">
+          My Order
+        </Nav.Link>
+        <Nav.Link as={Link} to="/dashboard/addreview">Add Review</Nav.Link>
+      </Nav>
+    </div>
+  );
 };
 
 export default Dashboard;
