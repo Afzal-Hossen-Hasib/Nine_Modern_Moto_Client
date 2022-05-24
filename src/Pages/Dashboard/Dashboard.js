@@ -10,10 +10,14 @@ const Dashboard = () => {
     <div>
       <Nav defaultActiveKey="/home" className="flex-column">
       <Outlet></Outlet>
+        <div className="new-nav-menu">
         <Nav.Link as={Link} to="/dashboard/myorder">
           My Order
         </Nav.Link>
         <Nav.Link as={Link} to="/dashboard/addreview">Add Review</Nav.Link>
+        <Nav.Link as={Link} to="/dashboard/myprofile">My Profile</Nav.Link>
+        <Nav.Link as={Link} to="/dashboard/users">Users</Nav.Link>
+        </div>
       </Nav>
     </div>
   );

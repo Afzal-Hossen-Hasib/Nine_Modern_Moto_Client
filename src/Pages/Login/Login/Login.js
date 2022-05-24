@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import login from "../../../Images/login/login.png";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import "./Login.css";
 import Loading from "../../SharedPage/Loading/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useToken from "../../../hooks/useToken";
 
 const Login = () => {
 
@@ -13,10 +14,12 @@ const Login = () => {
 
     const [
         signInWithEmailAndPassword,
-        eUser,
+        user,
         eLoading,
         eError,
       ] = useSignInWithEmailAndPassword(auth);
+
+      const [token] = useToken(user || gUser);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -25,18 +28,19 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
+    useEffect(() => {
+      if (token) {
+        console.log(user || gUser);
+        navigate(from, { replace: true });
+    }
+    } ,[token, from, navigate]);
+
     if (gLoading || eLoading) {
         return <Loading></Loading>
     }
 
     if(eError || gError) {
         errorMessage = <p className="text-danger">{eError?.message || gError?.message}</p>
-    }
-
-    if (eUser || gUser) {
-        console.log(eUser || gUser);
-        navigate(from, { replace: true });
-
     }
 
     const onSubmit = data => {

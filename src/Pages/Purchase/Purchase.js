@@ -54,6 +54,8 @@ const Purchase = () => {
     .then (result => {
       console.log(result);
    })
+
+   toast ('Your Order Hase Been Placed')
     };
 
   

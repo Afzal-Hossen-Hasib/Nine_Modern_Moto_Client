@@ -6,13 +6,11 @@ import "./Review.css";
 const Review = () => {
   const [review, setReview] = useReview();
 
-  const clientReview = review.slice(0, 3);
-
   return (
     <div className="container review-div">
       <h1 className="review-title">Our Client Says</h1>
       <div className="review-card">
-        {clientReview.map((client) => {
+        {review.map((client) => {
           const { name, img, rating, desription } = client;
           return (
             <div className="single-reviews">
@@ -38,9 +36,6 @@ const Review = () => {
           );
         })}
       </div>
-      <Link to="/allreview" className="review-button w-25 d-block mx-auto">
-        Please Say something
-      </Link>
     </div>
   );
 };

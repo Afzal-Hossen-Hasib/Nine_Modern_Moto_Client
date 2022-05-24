@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
 import Header from './Pages/SharedPage/Header/Header';
 import Footer from './Pages/SharedPage/Footer/Footer';
-import AllReview from './Pages/AllReview/AllReview';
 import AllParts from './Pages/AllParts/AllParts';
 import Purchase from './Pages/Purchase/Purchase';
 import Login from './Pages/Login/Login/Login';
@@ -16,6 +15,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/ForUser/MyOrder/MyOrder';
 import AddAReview from './Pages/ForUser/AddAReview/AddAReview';
+import MyProfile from './Pages/MyProfile/MyProfile';
+import User from './Pages/User/User';
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/allreview' element={<AllReview></AllReview>}></Route>
         <Route path='/myprotfolio' element={<MyProtfolio></MyProtfolio>}></Route>
         <Route path='/part/:partId' element={<RequireAuth>
           <Purchase></Purchase>
@@ -33,6 +33,8 @@ function App() {
         </RequireAuth>}>
           <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addreview' element={<AddAReview></AddAReview>}></Route>
+          <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='users' element={<User></User>}></Route>
         </Route>
         <Route path='/allparts' element={
           <RequireAuth>

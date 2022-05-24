@@ -7,6 +7,7 @@ import {
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../../hooks/useToken";
 import signUp from "../../../Images/register/register.png";
 import Loading from "../../SharedPage/Loading/Loading";
 import "./Register.css";
@@ -16,10 +17,11 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  const [createUserWithEmailAndPassword, eUser, eLoading, eError] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, eLoading, eError] = useCreateUserWithEmailAndPassword(auth);
 
   const [updateProfile, updating, uError] = useUpdateProfile(auth);
+
+  const [token] = useToken (user || gUser);
 
   const {
     register,
@@ -41,8 +43,9 @@ const Register = () => {
     );
   }
 
-  if (eUser || gUser) {
-    console.log(eUser || gUser);
+  if (token) {
+    console.log(user || gUser);
+    navigate("/");
   }
 
   const onSubmit = async (data) => {
@@ -50,7 +53,7 @@ const Register = () => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
     console.log("update done");
-    navigate("/");
+    
   };
 
   return (
