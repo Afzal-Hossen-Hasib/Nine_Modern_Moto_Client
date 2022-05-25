@@ -1,0 +1,11 @@
+.profile-div h6 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #283346;
+}
+
+.profile-div h4 {
+    font-weight: bold;
+    color: #ff3100;
+}

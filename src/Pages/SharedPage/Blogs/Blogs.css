@@ -1,0 +1,15 @@
+.qna-section {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.qna-section p {
+    font-size: 17px;
+}
+
+.qna-section span {
+    color: #e52727;
+    font-weight: bold;
+}

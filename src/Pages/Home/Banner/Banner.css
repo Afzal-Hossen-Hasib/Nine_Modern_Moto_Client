@@ -63,12 +63,46 @@
 
 
 @media only screen and (max-width: 576px) {
+
+
+    .banner-div h1 {
+        font-size: 20px;
+        line-height: 30px;
+        margin:0;
+    }
+
+    .banner-div h1 {
+        color: #031d48;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+
+    .banner-div img {
+        width: 100%;
+    }
     
-    .banner-container {
-        text-align: center;
+    .banner-div p {
+        color: #283346;
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        margin-top: 15px;
     }
     
     .banner-div {
         flex-basis: 100%;
+        margin-top: 30px;
+    }
+
+    .banner-button {
+        display: inline-block;
+        background: #ff3100;
+        color: white;
+        padding: 8px 30px;
+        margin: 10px 0;
+        border-radius: 30px;
+        border: none;
     }
 }

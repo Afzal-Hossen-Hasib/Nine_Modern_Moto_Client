@@ -8,7 +8,6 @@ import './MyOrder.css'
 const MyOrder = () => {
   const [user] = useAuthState(auth);
   const [myOrder, setMyOrder] = useState([]);
-  console.log(myOrder);
 
   const handleItemDelete = id => {
     const alert = window.confirm("Confirm Delete");
@@ -20,7 +19,6 @@ const MyOrder = () => {
         console.log(url)
             .then(res => res.json())
             .then(data => {
-              console.log(data);
               const remainItem = myOrder.filter(book => book._id !== id);
               setMyOrder(remainItem);
             })
@@ -38,7 +36,7 @@ const MyOrder = () => {
 
   return (
     <div className="container">
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col"></th>

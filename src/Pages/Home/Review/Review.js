@@ -18,14 +18,14 @@ const Review = () => {
           reviews.map ((client) => {
             const {name, img, review} = client;
             return (
-              <div className="single-reviews">
-                  <div class="row">
-                <div class="col">
-                  <div class="card h-100 single-review">
+              <div className="single-reviews" key={client._id}>
+                  <div className="row">
+                <div className="col">
+                  <div className="card h-100 single-review">
                     <img src={img} alt="" />
-                    <div class="card-body">
-                      <h4 class="card-title">{name}</h4>
-                      <p class="card-text">{review}</p>
+                    <div className="card-body">
+                      <h4 className="card-title">{name}</h4>
+                      <p className="card-text">{review}</p>
                     </div>
                   </div>
                 </div>

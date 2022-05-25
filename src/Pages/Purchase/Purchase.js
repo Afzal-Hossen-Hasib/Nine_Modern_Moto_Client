@@ -10,7 +10,6 @@ const Purchase = () => {
     const [user] = useAuthState(auth);
     const {partId} = useParams();
     const [part, setPart] = useState({});
-    console.log(part);
     const [inputQuantity, setInputQuantity] = useState ('');
 
     useEffect(() => {
@@ -64,15 +63,15 @@ const Purchase = () => {
             <div className="row">
               <div className="col-md-6">
               <div>
-              <div class="card-group single-part">
-                <div class="card item-part">
+              <div className="card-group single-part">
+                <div className="card item-part">
                   <img src={part.img} alt="" />
-                  <div class="card-body title-part">
-                    <h4 class="card-title">{part.name}</h4>
-                    <p class="card-text">Price: <span>${part.price}</span></p>
-                    <p class="card-text">Available Quantity: <span>{part.availablequantity}</span></p>
-                    <p class="card-text">Minimum Order: <span>{part.minimunorder}</span></p>
-                    <h6 class="card-text">{part.desription}</h6>                  
+                  <div className="card-body title-part">
+                    <h4 className="card-title">{part.name}</h4>
+                    <p className="card-text">Price: <span>${part.price}</span></p>
+                    <p className="card-text">Available Quantity: <span>{part.availablequantity}</span></p>
+                    <p className="card-text">Minimum Order: <span>{part.minimunorder}</span></p>
+                    <h6 className="card-text">{part.desription}</h6>                  
                   </div>
                 </div>
               </div>            

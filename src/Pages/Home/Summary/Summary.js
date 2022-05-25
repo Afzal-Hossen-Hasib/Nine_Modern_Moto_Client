@@ -13,40 +13,40 @@ const Summary = () => {
       <h4>Try To Understand Users Expectation</h4>
       </div>
       <div className="summary-div">
-        <div class="row row-cols-2 row-cols-md-4 g-4">
-          <div class="col">
-            <div class="card h-100 first-card">
+        <div className="row row-cols-2 row-cols-md-4 g-4">
+          <div className="col">
+            <div className="card h-100 first-card">
               <img src={countries} alt="" />
-              <div class="card-body">
-                <h5 class="card-title">72+</h5>
-                <p class="card-text">Countries</p>
+              <div className="card-body">
+                <h5 className="card-title">72+</h5>
+                <p className="card-text">Countries</p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100 first-card">
+          <div className="col">
+            <div className="card h-100 first-card">
               <img src={projects} alt="" />
-              <div class="card-body">
-                <h5 class="card-title">535+</h5>
-                <p class="card-text">Complete Projects</p>
+              <div className="card-body">
+                <h5 className="card-title">535+</h5>
+                <p className="card-text">Complete Projects</p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100 first-card">
+          <div className="col">
+            <div className="card h-100 first-card">
               <img src={client} alt="" />
-              <div class="card-body">
-                <h5 class="card-title">277+</h5>
-                <p class="card-text">Happy Clients</p>
+              <div className="card-body">
+                <h5 className="card-title">277+</h5>
+                <p className="card-text">Happy Clients</p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100 first-card">
+          <div className="col">
+            <div className="card h-100 first-card">
               <img src={feedback} alt="" />
-              <div class="card-body">
-                <h5 class="card-title">437+</h5>
-                <p class="card-text">Feedbacks</p>
+              <div className="card-body">
+                <h5 className="card-title">437+</h5>
+                <p className="card-text">Feedbacks</p>
               </div>
             </div>
           </div>

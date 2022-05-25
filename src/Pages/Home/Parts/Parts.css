@@ -75,3 +75,16 @@
 .item-part:hover {
     transform: translateY(-5px);
 }
+
+
+@media only screen and (max-width: 576px) {
+
+    .parts-div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .review-button {
+        width: 100% !important;
+    }
+
+}

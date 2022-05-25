@@ -28,17 +28,17 @@ const Payment = () => {
 
     return (
         <div className='container'>
-            <div class="card">
-  <div class="card-body">
+            <div className="card">
+  <div className="card-body">
       <h3>Hello {user.displayName}</h3>
-    <h5 class="card-title">Please For: {data.name}</h5>
-    <p class="card-text">Please Pay: ${data.price}</p>
+    <h5 className="card-title">Please For: {data.name}</h5>
+    <p className="card-text">Please Pay: ${data.price}</p>
     
   </div>
 </div>
 
-<div class="card mt-5">
-  <div class="card-body">
+<div className="card mt-5">
+  <div className="card-body">
   <Elements stripe={stripePromise}>
     <CheckoutForm data={data}/>
   </Elements>

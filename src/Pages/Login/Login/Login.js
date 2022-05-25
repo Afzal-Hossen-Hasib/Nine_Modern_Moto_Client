@@ -30,7 +30,6 @@ const Login = () => {
 
     useEffect(() => {
       if (token) {
-        console.log(user || gUser);
         navigate(from, { replace: true });
     }
     } ,[token, from, navigate]);
@@ -44,7 +43,6 @@ const Login = () => {
     }
 
     const onSubmit = data => {
-        console.log(data)
         signInWithEmailAndPassword (data.email, data.password);
     };
 

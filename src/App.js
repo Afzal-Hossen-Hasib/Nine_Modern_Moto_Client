@@ -22,6 +22,7 @@ import Payment from './Pages/Payment/Payment';
 import ManageAllProducts from './Pages/Admin/ManageAllProducts/ManageAllProducts';
 import ManageAllOrders from './Pages/Admin/ManageAllOrders/ManageAllOrders';
 import AddAProduct from './Pages/Admin/AddAProduct/AddAProduct';
+import Blogs from './Pages/SharedPage/Blogs/Blogs';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
