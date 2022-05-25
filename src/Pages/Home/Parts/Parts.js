@@ -5,7 +5,10 @@ import "./Parts.css";
 
 const Parts = () => {
   const [parts, setParts] = useParts();
-  const newParts = parts.slice(0, 6);
+  const newParts = parts.slice(-6);
+  console.log(newParts);
+  const allPart = newParts.reverse();
+  console.log(allPart);
   const navigate = useNavigate();
 
   const handlePurchase = id => {
@@ -17,7 +20,7 @@ const Parts = () => {
       <h1 className="part-title">Parts</h1>
 
       <div className="parts-div">
-        {newParts.map((showPart) => {
+        {allPart.map((showPart) => {
           const { name, img, price, availablequantity, minimunorder, desription, _id } = showPart;
           return (
             <div key={showPart._id}>

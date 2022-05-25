@@ -31,6 +31,7 @@ const AddAReview = () => {
             <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                     <input className="w-50 d-block mx-auto input-group-text" placeholder='Your Name'  {...register("name")} required /> <br />
+                    <input className="w-50 d-block mx-auto input-group-text" placeholder='Rating'  {...register("number")} required /> <br />
                     <input className="w-50 d-block mx-auto input-group-text" placeholder='Image Link'  {...register("img")} required /> <br />
                     <textarea className="w-50 d-block mx-auto input-group-text" placeholder='Short Review'  {...register("review")} required /> <br />
                     <button className="w-50 d-block mx-auto mb-3 login-button" type="submit">Add Review</button>

@@ -27,7 +27,7 @@ const Payment = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='container bg-primary'>
             <div className="card">
   <div className="card-body">
       <h3>Hello {user.displayName}</h3>

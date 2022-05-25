@@ -53,7 +53,7 @@ const MyOrder = () => {
             <tr key={order._id}>
               <th scope="row">{i + 1}</th>
               <td>{order.name}</td>
-              <td>${order.price} <span>(Per Unit)</span></td>
+              <td>$ {order.price * order.quantity} <span>(${order.price} Per Unit)</span></td>
               <td>{order.quantity} PCS</td>
               <td>
               {order.paid? <button className="btn btn-danger" onClick={() => handleItemDelete(order._id)} disabled>Delete</button> : <button className="btn btn-danger" onClick={() => handleItemDelete(order._id)}>Delete</button>}

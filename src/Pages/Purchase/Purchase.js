@@ -23,6 +23,7 @@ const Purchase = () => {
     const handleInputQuantity = event => {
       setInputQuantity(event.target.value)
     }
+    console.log(inputQuantity);
 
     const Order = data => {
       if(inputQuantity < part.minimunorder) {
@@ -54,7 +55,7 @@ const Purchase = () => {
       console.log(result);
    })
 
-   toast ('Your Order Hase Been Placed')
+   toast ('Your Order Has Been Placed')
     };
   
     return (
@@ -68,9 +69,10 @@ const Purchase = () => {
                   <img src={part.img} alt="" />
                   <div className="card-body title-part">
                     <h4 className="card-title">{part.name}</h4>
-                    <p className="card-text">Price: <span>${part.price}</span></p>
-                    <p className="card-text">Available Quantity: <span>{part.availablequantity}</span></p>
-                    <p className="card-text">Minimum Order: <span>{part.minimunorder}</span></p>
+                    <p className="card-text">Price: <span>${part.price} (Per Unit)</span></p>
+                    <p className="card-text">Total Price: <span>${part.price * inputQuantity}</span></p>
+                    <p className="card-text">Available Quantity: <span>{part.availablequantity} PCS</span></p>
+                    <p className="card-text">Minimum Order: <span>{part.minimunorder} PCS</span></p>
                     <h6 className="card-text">{part.desription}</h6>                  
                   </div>
                 </div>
@@ -79,7 +81,7 @@ const Purchase = () => {
               </div>
               <div className="col-md-6">
                 <div className='right-div'>
-                <div className='w-75 d-block mx-auto'>
+                <div className='w-75 d-block mx-auto mt-5'>
                 <input className='w-75 input-group-text' type="text" name="name" disabled value={user?.displayName || ''}/> <br />
                 <input className='w-75 input-group-text' type="email" name="email" disabled value={user?.email || ''}/> <br />
                 <input className='w-75 input-group-text' type="text" placeholder='Address' /> <br />
