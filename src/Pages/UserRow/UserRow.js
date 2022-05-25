@@ -26,7 +26,7 @@ const UserRow = ({user}) => {
     <tr>
       <th scope="row">1</th>
       <td>{email}</td>
-      <td><button onClick={makeAdmin}>Make Admin</button></td>
+      <td><button className="btn btn-info" onClick={makeAdmin}>Make Admin</button></td>
     </tr>
   );
 };

@@ -19,6 +19,9 @@ import MyProfile from './Pages/MyProfile/MyProfile';
 import User from './Pages/User/User';
 import RequireAdmin from './Pages/Login/RequireAuth/RequireAdmin';
 import Payment from './Pages/Payment/Payment';
+import ManageAllProducts from './Pages/Admin/ManageAllProducts/ManageAllProducts';
+import ManageAllOrders from './Pages/Admin/ManageAllOrders/ManageAllOrders';
+import AddAProduct from './Pages/Admin/AddAProduct/AddAProduct';
 
 
 function App() {
@@ -40,6 +43,15 @@ function App() {
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin>
             <User></User>
+          </RequireAdmin>}></Route>
+          <Route path='manageproduct' element={<RequireAdmin>
+            <ManageAllProducts></ManageAllProducts>
+          </RequireAdmin>}></Route>
+          <Route path='manageorder' element={<RequireAdmin>
+            <ManageAllOrders></ManageAllOrders>
+          </RequireAdmin>}></Route>
+          <Route path='addaproduct' element={<RequireAdmin>
+            <AddAProduct></AddAProduct>
           </RequireAdmin>}></Route>
         </Route>
         <Route path='/allparts' element={

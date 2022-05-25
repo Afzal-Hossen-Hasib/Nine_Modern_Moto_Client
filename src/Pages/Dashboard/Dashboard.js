@@ -21,7 +21,12 @@ const Dashboard = () => {
         </Nav.Link>
         <Nav.Link as={Link} to="/dashboard/addreview">Add Review</Nav.Link>
         <Nav.Link as={Link} to="/dashboard/myprofile">My Profile</Nav.Link>
-        {admin && <Nav.Link as={Link} to="/dashboard/users">Users</Nav.Link>}
+        {admin && <Nav>
+          <Nav.Link as={Link} to="/dashboard/users">Users</Nav.Link>
+          <Nav.Link as={Link} to="/dashboard/manageproduct">Manage Products</Nav.Link>
+          <Nav.Link as={Link} to="/dashboard/manageorder">Manage Orders</Nav.Link>
+          <Nav.Link as={Link} to="/dashboard/addaproduct">Add A Product</Nav.Link>
+          </Nav>}
         </div>
       </Nav>
     </div>

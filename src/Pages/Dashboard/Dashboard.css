@@ -2,5 +2,13 @@
     background-color: #283346;
     width: 200px;
     height: 60vh;
+    
+}
+
+.new-nav-menu a {
     color: white;
+}
+
+.new-nav-menu a:hover {
+    color: #ff3100;
 }

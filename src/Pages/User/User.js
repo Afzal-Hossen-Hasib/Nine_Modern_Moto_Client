@@ -17,7 +17,7 @@ const User = () => {
 
     return (
         <div className='container'>
-            <h1>User: {users.length}</h1>
+            <h1 className='part-title'>All User</h1>
             <table class="table">
   <thead>
     <tr>
