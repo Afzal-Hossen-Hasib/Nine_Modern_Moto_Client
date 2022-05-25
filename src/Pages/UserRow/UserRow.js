@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const UserRow = ({user}) => {
     const {email} = user;
@@ -9,9 +10,16 @@ const UserRow = ({user}) => {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
-        .then (res => res.json())
+        .then (res => {
+          if (res.status === 403) {
+            toast.error ('Failed To Make An Admin');
+          }
+          return res.json()})
         .then (data => {
             console.log(data);
+            if (data.modifiedCount > 0) {
+              toast.success ('Successfully Made An Admin');
+            }
         })
     }
   return (

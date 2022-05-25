@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Nav } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import auth from "../../firebase.init";
+import useAdmin from "../../hooks/useAdmin";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const [Expanded, setExpanded] = useState(false);
+
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
 
   return (
     <div>
@@ -16,7 +21,7 @@ const Dashboard = () => {
         </Nav.Link>
         <Nav.Link as={Link} to="/dashboard/addreview">Add Review</Nav.Link>
         <Nav.Link as={Link} to="/dashboard/myprofile">My Profile</Nav.Link>
-        <Nav.Link as={Link} to="/dashboard/users">Users</Nav.Link>
+        {admin && <Nav.Link as={Link} to="/dashboard/users">Users</Nav.Link>}
         </div>
       </Nav>
     </div>

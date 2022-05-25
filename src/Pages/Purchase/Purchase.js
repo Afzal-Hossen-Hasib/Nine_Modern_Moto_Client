@@ -57,15 +57,13 @@ const Purchase = () => {
 
    toast ('Your Order Hase Been Placed')
     };
-
   
     return (
-        <div className='container'>
-            <div>
-              <span>{user.displayName}</span>
-              <span>{user.email}</span>
-            </div>
-            <div className='w-50 d-block mx-auto'>
+        <div className='container mt-5'>
+            
+            <div className="row">
+              <div className="col-md-6">
+              <div>
               <div class="card-group single-part">
                 <div class="card item-part">
                   <img src={part.img} alt="" />
@@ -74,15 +72,27 @@ const Purchase = () => {
                     <p class="card-text">Price: <span>${part.price}</span></p>
                     <p class="card-text">Available Quantity: <span>{part.availablequantity}</span></p>
                     <p class="card-text">Minimum Order: <span>{part.minimunorder}</span></p>
-                    <h5 className='order-title'>
-                      Order: 
-                      <input onChange={handleInputQuantity} type="number" placeholder='Add Quantity' className='ms-2'/>
-                    </h5>
-                    <h6 class="card-text">{part.desription}</h6>
-                    <button className='order-button w-50 d-block mx-auto' onClick={() => Order(Order) }>Place Order</button>
+                    <h6 class="card-text">{part.desription}</h6>                  
                   </div>
                 </div>
               </div>            
+            </div>
+              </div>
+              <div className="col-md-6">
+                <div className='right-div'>
+                <div className='w-75 d-block mx-auto'>
+                <input className='w-75 input-group-text' type="text" name="name" disabled value={user?.displayName || ''}/> <br />
+                <input className='w-75 input-group-text' type="email" name="email" disabled value={user?.email || ''}/> <br />
+                <input className='w-75 input-group-text' type="text" placeholder='Address' /> <br />
+                <input className='w-75 input-group-text' type="email" placeholder='Phone Number'/> <br />
+                <h5 className='order-title'>
+                      Order: 
+                      <input onChange={handleInputQuantity} type="number" placeholder='Add Quantity' className='ms-2'/>
+                    </h5>
+                    <button className='order-button w-50 d-block mx-auto mb-5' onClick={() => Order(Order) }>Place Order</button>
+                </div>
+                </div>
+              </div>
             </div>
             
         </div>
