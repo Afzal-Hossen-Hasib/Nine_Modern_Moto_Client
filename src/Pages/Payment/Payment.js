@@ -1,6 +1,5 @@
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
@@ -38,10 +37,10 @@ const Payment = () => {
   </div>
 </div>
 
-<div class="card">
+<div class="card mt-5">
   <div class="card-body">
   <Elements stripe={stripePromise}>
-    <CheckoutForm />
+    <CheckoutForm data={data}/>
   </Elements>
     
   </div>

@@ -1,0 +1,13 @@
+.pay-button {
+    background: #031d48;
+    color: white;
+}
+
+.pay-button:hover {
+    background: #031d48;
+    color: wheat;
+}
+
+.paid {
+    color: #ff3100;
+}

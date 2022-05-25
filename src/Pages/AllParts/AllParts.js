@@ -25,9 +25,9 @@ const AllParts = () => {
                   <img src={img} alt="" />
                   <div class="card-body title-part">
                     <h4 class="card-title">{name}</h4>
-                    <p class="card-text">Price: <span>${price}</span></p>
-                    <p class="card-text">Available Quantity: <span>{availablequantity}</span></p>
-                    <p class="card-text">Minimum Order: <span>{minimunorder}</span></p>
+                    <p class="card-text">Price: <span>${price} (Per Unit)</span></p>
+                    <p class="card-text">Available Quantity: <span>{availablequantity} PCS</span></p>
+                    <p class="card-text">Minimum Order: <span>{minimunorder} PCS</span></p>
                     <h6 class="card-text">{desription}</h6>
                   </div>
                   <div class="card-footer item-part">

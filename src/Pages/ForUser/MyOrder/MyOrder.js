@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../SharedPage/Loading/Loading";
+import './MyOrder.css'
 
 const MyOrder = () => {
   const [user] = useAuthState(auth);
@@ -51,27 +52,25 @@ const MyOrder = () => {
 
         <tbody>
           {myOrder.map((order, i) => 
-            <tr>
+            <tr key={order._id}>
               <th scope="row">{i + 1}</th>
               <td>{order.name}</td>
-              <td>{order.price}</td>
-              <td>{order.quantity}</td>
+              <td>${order.price} <span>(Per Unit)</span></td>
+              <td>{order.quantity} PCS</td>
               <td>
-                <button onClick={() => handleItemDelete(order._id)}>
-                  Delete
-                </button>
+              {order.paid? <button className="btn btn-danger" onClick={() => handleItemDelete(order._id)} disabled>Delete</button> : <button className="btn btn-danger" onClick={() => handleItemDelete(order._id)}>Delete</button>}
               </td>
 
               <td>
                 {(order.price && !order.paid) && 
                   <Link to={`/dashboard/payment/${order._id}`}>
-                    <button>Pay</button>
+                    <button className="btn pay-button">Pay</button>
                   </Link>
                 }
 
                 {(order.price && order.paid) && 
                   <div>
-                    <p>Paid</p>
+                    <p className="paid">Paid</p>
                   </div>
                 }
               </td>

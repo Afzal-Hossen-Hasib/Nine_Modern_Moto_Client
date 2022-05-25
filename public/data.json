@@ -1,31 +1,5 @@
 [
-    {
-      "id": "6289274b622dd10d43e8a171",
-      "img": "https://i.ibb.co/TR3CYBp/uv-sportket.jpg",
-      "price": 200,
-      "availablequantity": 1000,
-      "minimunorder": 100,
-      "name": "Uv Sportket",
-      "desription": "335 Evergreen Avenue, Brethren, Mississippi, 8201"
-    },
-    {
-      "id": "6289274b86057955233306ea",
-      "img": "https://i.ibb.co/Fx74rLB/bright-light.jpg",
-      "price": 250,
-      "availablequantity": 700,
-      "minimunorder": 50,
-      "name": "Bright Light",
-      "desription": "331 Cameron Court, Snyderville, Tennessee, 4682"
-    },
-    {
-      "id": "6289274ba4979cbcd92e4bd6",
-      "img": "https://i.ibb.co/tp7Sq2P/sport-filter.jpg",
-      "price": 360,
-      "availablequantity": 600,
-      "minimunorder": 100,
-      "name": "Sport Filter",
-      "desription": "118 Lester Court, Frierson, Colorado, 8588"
-    },
+    
     {
       "id": "6289274b8ae9381d6206d87f",
       "img": "https://i.ibb.co/3yJHxVX/sport-shoes.jpg",
@@ -33,7 +7,7 @@
       "availablequantity": 800,
       "minimunorder": 100,
       "name": "Sport Shoes",
-      "desription": "399 Miller Place, Clarktown, Maine, 1515"
+      "desription": "Motorcycle street boots offer more protection by using special soles, armor plating, and abrasion-resistant materials with its construction."
     },
     {
       "id": "6289274bae969a6c4ccff38b",
@@ -42,7 +16,7 @@
       "availablequantity": 1000,
       "minimunorder": 200,
       "name": "Motosport Exhaust",
-      "desription": "723 Herkimer Street, Darlington, Ohio, 1766"
+      "desription": "Our exhaust systems are produced under the brand Bull-X. This name stands for quality, durability and a unique sound."
     },
     {
       "id": "6289274b050165c60e9d92be",
@@ -51,7 +25,7 @@
       "availablequantity": 700,
       "minimunorder": 50,
       "name": "Sport Light",
-      "desription": "617 Royce Place, Vincent, North Dakota, 8047"
+      "desription": "Pretty impressive. What we like about the Squadron Sport lights is the versatility, quality, and performance of these lights."
     },
     {
       "id": "6289274b508d34d6170ceea4",
@@ -60,7 +34,7 @@
       "availablequantity": 600,
       "minimunorder": 50,
       "name": "Sport Seat",
-      "desription": "270 Elmwood Avenue, Eureka, Washington, 7036"
+      "desription": "The Sport Seat allows you to move side to side by minimizing the defined pocket of the seat so you can feel a pocket while cruising"
     },
     {
       "id": "6289274bfe171b3a88495f4e",
@@ -69,7 +43,7 @@
       "availablequantity": 800,
       "minimunorder": 100,
       "name": "Oil Filter",
-      "desription": "322 Stockton Street, Rew, Florida, 3519"
+      "desription": "The powerful electromagnet in magnetic oil filters attracts and traps any material that is ferromagnetic found in the oil before it goes into the engine through the large centre opening."
     },
     {
       "id": "6289274b08363daaaee56451",
@@ -78,7 +52,7 @@
       "availablequantity": 500,
       "minimunorder": 100,
       "name": "Sport Breake",
-      "desription": "465 Glen Street, Sanford, South Dakota, 7747"
+      "desription": "The front does seventy (70) percent or more of the braking! On very short wheelbase, lighter, sport-style motorcycles,"
     },
     {
       "id": "6289274b64f299d489da1934",
@@ -87,7 +61,7 @@
       "availablequantity": 1000,
       "minimunorder": 100,
       "name": "Presser Metter",
-      "desription": "997 Lawrence Street, Enlow, Arizona, 6542"
+      "desription": "Find the best motorcycle tyre pressure gauge for maintenance and safe riding. "
     },
     {
       "id": "6289274bd77f859dc2ea6899",
@@ -96,7 +70,7 @@
       "availablequantity": 700,
       "minimunorder": 100,
       "name": "Sport Propeller",
-      "desription": "404 Oceanic Avenue, Dunbar, Rhode Island, 470"
+      "desription": "Find out about the Meet the new member of the family: the WATERGRIP SPORT propeller series here."
     },
     {
       "id": "6289274b08c21b9daf605e4d",
@@ -105,6 +79,6 @@
       "availablequantity": 700,
       "minimunorder": 50,
       "name": "Sport Suspensions",
-      "desription": "498 Clark Street, Ribera, Michigan, 5337"
+      "desription": "This type of suspensions is generally seen at the sports category bikes. motorcycle-suspensions-spring-loaded."
     }
   ]
