@@ -23,7 +23,7 @@ const ManageAllProducts = () => {
   };
 
     return (
-        <div className="container pb-4">
+        <div className="container pb-4 ">
       <h1 className="part-title">All Products</h1>
 
       <div className="parts-div">

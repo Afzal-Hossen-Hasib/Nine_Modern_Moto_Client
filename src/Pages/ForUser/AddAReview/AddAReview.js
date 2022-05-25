@@ -26,7 +26,7 @@ const AddAReview = () => {
     };
 
     return (
-        <div className='container'>
+        <div className='container dashboard-content'>
             <h1 className="review-title">Please Say Something</h1>
             <div>
             <form onSubmit={handleSubmit(onSubmit)}>

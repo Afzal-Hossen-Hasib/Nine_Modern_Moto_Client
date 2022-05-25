@@ -16,7 +16,7 @@ const User = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='container dashboard-content'>
             <h1 className='part-title'>All User</h1>
             <table className="table">
   <thead>

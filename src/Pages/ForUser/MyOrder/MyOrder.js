@@ -35,7 +35,7 @@ const MyOrder = () => {
 }, [user]);
 
   return (
-    <div className="container">
+    <div className="dashboard-content">
       <table className="table">
         <thead>
           <tr>
