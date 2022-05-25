@@ -18,6 +18,7 @@ import AddAReview from './Pages/ForUser/AddAReview/AddAReview';
 import MyProfile from './Pages/MyProfile/MyProfile';
 import User from './Pages/User/User';
 import RequireAdmin from './Pages/Login/RequireAuth/RequireAdmin';
+import Payment from './Pages/Payment/Payment';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         </RequireAuth>}>
           <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addreview' element={<AddAReview></AddAReview>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin>
             <User></User>
