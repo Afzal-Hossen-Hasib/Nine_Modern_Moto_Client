@@ -6,9 +6,7 @@ import "./Parts.css";
 const Parts = () => {
   const [parts, setParts] = useParts();
   const newParts = parts.slice(-6);
-  console.log(newParts);
   const allPart = newParts.reverse();
-  console.log(allPart);
   const navigate = useNavigate();
 
   const handlePurchase = id => {

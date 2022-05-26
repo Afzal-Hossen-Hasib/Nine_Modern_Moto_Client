@@ -35,7 +35,7 @@ const MyOrder = () => {
 }, [user]);
 
   return (
-    <div className="dashboard-content">
+    <div className="container">
       <table className="table">
         <thead>
           <tr>
@@ -69,6 +69,7 @@ const MyOrder = () => {
                 {(order.price && order.paid) && 
                   <div>
                     <p className="paid">Paid</p>
+                    <p>Transaction Id: {order.transactionId}</p>
                   </div>
                 }
               </td>

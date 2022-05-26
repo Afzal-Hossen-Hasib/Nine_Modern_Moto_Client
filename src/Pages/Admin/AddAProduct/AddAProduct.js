@@ -9,7 +9,7 @@ const AddAProduct = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = data => {
+    const onSubmit = (data, e) => {
         console.log(data)
 
         const url = `http://localhost:5000/part`;
@@ -27,6 +27,7 @@ const AddAProduct = () => {
         });
   
         toast('Product Added Successfully')
+        e.target.reset();
       };
 
     return (

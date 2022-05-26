@@ -13,12 +13,14 @@ const MyProtfolio = () => {
 
         <div className="about_me_info">
           <div className="educationa_info">
-            <h3>My Profile</h3>
             <p>
               Name: <span>Afzal Hossen Hasib</span>
             </p>
             <p>
               Email: <span>ahhasib47@gmail.com</span>
+            </p>
+            <p>
+              Mobile: <span>01740233993</span>
             </p>
             <p>
               Graduation:{" "}

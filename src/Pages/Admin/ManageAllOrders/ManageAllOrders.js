@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
 import Loading from '../../SharedPage/Loading/Loading';
 import './ManageAllOrders.css'
 
@@ -9,7 +7,7 @@ const ManageAllOrders = () => {
     const [order, setOrder] = useState([]);
 
     const handleItemDelete = id => {
-        const alert = window.confirm("Confirm Delete");
+        const alert = ("Confirm Delete");
         if (alert) {
             const url = `http://localhost:5000/myorder/${id}`;
             fetch(url, {
@@ -26,7 +24,7 @@ const ManageAllOrders = () => {
       };
 
     useEffect(() => {
-        const url = 'http://localhost:5000/myorder'
+        const url = 'http://localhost:5000/allorder'
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data))
@@ -64,7 +62,7 @@ const ManageAllOrders = () => {
               <td>
               {(order.price && !order.paid) && 
                   
-                    <button className="btn pay-button">Payment Pending</button>
+                    <button className="btn pay-button">Unpaid</button>
                   
                 }
                 {(order.price && order.paid) && 

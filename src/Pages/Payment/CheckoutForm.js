@@ -118,7 +118,7 @@ const CheckoutForm = ({data}) => {
             },
           }}
         />
-        <button type="submit" disabled={!stripe || !clientSecret}>
+        <button className="pay-button" type="submit" disabled={!stripe || !clientSecret}>
           Pay
         </button>
       </form>
