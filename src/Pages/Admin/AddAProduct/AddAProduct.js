@@ -12,7 +12,7 @@ const AddAProduct = () => {
     const onSubmit = (data, e) => {
         console.log(data)
 
-        const url = `http://localhost:5000/part`;
+        const url = `https://aqueous-inlet-29591.herokuapp.com/part`;
         console.log(url);
         fetch (url, {
           method: 'POST',

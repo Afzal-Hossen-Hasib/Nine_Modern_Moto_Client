@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51L3INSIwTos1xk8ThQNqWiFjouz1KT4MQoJGM
 const Payment = () => {
     const {id} = useParams ();
     const [user] = useAuthState(auth)
-    const url = `http://localhost:5000/myorder/${id}`;
+    const url = `https://aqueous-inlet-29591.herokuapp.com/myorder/${id}`;
 
     const {data, isLoading} = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',

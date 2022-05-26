@@ -9,7 +9,7 @@ const ManageAllProducts = () => {
       const procced = window.confirm('Are You Sure?')
 
       if (procced) {
-          const url = `http://localhost:5000/part/${id}`;
+          const url = `https://aqueous-inlet-29591.herokuapp.com/part/${id}`;
           fetch (url, {
               method: 'DELETE'
           })

@@ -13,7 +13,7 @@ const Purchase = () => {
     const [inputQuantity, setInputQuantity] = useState ('');
 
     useEffect(() => {
-        const url = `http://localhost:5000/part/${partId}`;
+        const url = `https://aqueous-inlet-29591.herokuapp.com/part/${partId}`;
 
         fetch(url)
         .then (res => res.json())
@@ -41,7 +41,7 @@ const Purchase = () => {
         email: user.email,
     }
 
-    const url = `http://localhost:5000/myorder`
+    const url = `https://aqueous-inlet-29591.herokuapp.com/myorder`
     fetch (url, {
       method: "POST",
       headers: {

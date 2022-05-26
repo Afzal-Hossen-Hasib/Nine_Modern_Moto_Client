@@ -9,7 +9,7 @@ const ManageAllOrders = () => {
     const handleItemDelete = id => {
         const alert = ("Confirm Delete");
         if (alert) {
-            const url = `http://localhost:5000/myorder/${id}`;
+            const url = `https://aqueous-inlet-29591.herokuapp.com/myorder/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -24,7 +24,7 @@ const ManageAllOrders = () => {
       };
 
     useEffect(() => {
-        const url = 'http://localhost:5000/allorder'
+        const url = 'https://aqueous-inlet-29591.herokuapp.com/allorder'
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data))

@@ -13,7 +13,7 @@ const MyProfile = () => {
     const onSubmit = data => {
         console.log(data)
 
-        const url = `http://localhost:5000/profile`;
+        const url = `https://aqueous-inlet-29591.herokuapp.com/profile`;
         console.log(url);
         fetch (url, {
           method: 'POST',

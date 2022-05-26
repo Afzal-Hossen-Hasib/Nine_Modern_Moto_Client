@@ -13,7 +13,7 @@ const CheckoutForm = ({data}) => {
   const {_id, price, email, displayName} = data;
 
   useEffect (() => {
-        fetch ('http://localhost:5000/create-payment-intent', {
+        fetch ('https://aqueous-inlet-29591.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type':'application/json',
@@ -84,7 +84,7 @@ const CheckoutForm = ({data}) => {
                 transactionId: paymentIntent.id
           }
 
-          fetch (`http://localhost:5000/myorder/${_id}`, {
+          fetch (`https://aqueous-inlet-29591.herokuapp.com/myorder/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type':'application/json',
